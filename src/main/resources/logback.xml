@@ -1,0 +1,20 @@
+<configuration>
+    <!-- Define appenders -->
+    <appender name="FILE" class="ch.qos.logback.core.FileAppender">
+        <file>logs/spring-boot-application.log</file>
+        <encoder>
+            <pattern>%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <!-- Define log levels -->
+    <logger name="Log-Management-with-ELK-Stack" level="DEBUG"/>
+    <logger name="org.springframework.web" level="DEBUG"/>
+    <logger name="org.springframework.web.servlet" level="DEBUG"/>
+    <logger name="org.springframework.web.servlet.mvc.method.annotation" level="DEBUG"/>
+
+    <!-- Root logger configuration -->
+    <root level="INFO">
+        <appender-ref ref="FILE"/>
+    </root>
+</configuration>

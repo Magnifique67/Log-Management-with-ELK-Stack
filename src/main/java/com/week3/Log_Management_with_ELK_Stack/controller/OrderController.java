@@ -1,9 +1,13 @@
 package com.week3.Log_Management_with_ELK_Stack.controller;
 
+import com.week3.Log_Management_with_ELK_Stack.LogManagementWithElkStackApplication;
 import com.week3.Log_Management_with_ELK_Stack.model.Order;
 import com.week3.Log_Management_with_ELK_Stack.service.OrderService;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.logging.Logger;
 
 @RestController
 @RequestMapping("/api/orders")
